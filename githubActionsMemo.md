@@ -27,6 +27,13 @@
 リポジトリ名は小文字制限あり(ユーザ名含めて小文字統一)
 
 
+```
+Error: buildx failed with: ERROR: failed to solve: failed to push ghcr.io/sample:v1.0.1: 
+unexpected status from HEAD request to 
+https://ghcr.io/v2/sample/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1: 
+400 Bad Request`
+```
+
 ### 備考
 
 * dockerイメージをビルドするコマンド
