@@ -16,10 +16,10 @@
 * actions/setup-java@v4
   * キャッシュをいい感じにできないか？
 
+### 備考
 
-#### エラー
-
-```agsl
-ERROR: failed to solve: failed to compute cache key: failed to calculate checksum of ref moby::4wtat6w7fvn87megu2i1h0bw8: failed to walk /var/lib/docker/tmp/buildkit-mount2474669729/build/libs: lstat /var/lib/docker/tmp/buildkit-mount2474669729/build/libs: no such file or directory
-
-```
+* dockerイメージをビルドするコマンド
+  * `docker build -f docker/backend -t java:latest .`
+    * -f : Dockerfileのパスを指定する
+    * -t : イメージのタグを指定する
+    * .  : ビルドコンテキストを指定する。ここではコマンド実行する現在のディレクトリを指定している
