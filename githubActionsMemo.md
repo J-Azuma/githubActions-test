@@ -16,6 +16,13 @@
 * actions/setup-java@v4
   * キャッシュをいい感じにできないか？
 
+### エラーログ
+
+`buildx failed with: ERROR: invalid tag "ghcr.io/J-Azuma/githubActions-test/java:v1.0.0": repository name must be lowercase`
+
+リポジトリ名は小文字制限あり
+
+
 ### 備考
 
 * dockerイメージをビルドするコマンド
