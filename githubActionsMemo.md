@@ -34,6 +34,14 @@ https://ghcr.io/v2/sample/blobs/sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb55
 400 Bad Request`
 ```
 
+タグ名をメタデータで指定しておくと上手くいった
+```
+Error: buildx failed with: ERROR: failed to solve: failed to push test:v1.0.2: failed to authorize: 
+failed to fetch oauth token: unexpected status from GET request to 
+https://auth.docker.io/token?scope=repository%3Alibrary%2Ftest%3Apull%2Cpush&service=registry.docker.io: 401 Unauthorized
+```
+
+多分トークンの権限が良くない
 ### 備考
 
 * dockerイメージをビルドするコマンド
