@@ -32,6 +32,12 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      # Dockerイメージのメタデータを設定する
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: test
       # イメージをビルドしてpushする
       - name: Build and Push
         uses: docker/build-push-action@v5
@@ -39,4 +45,4 @@ jobs:
           context: .
           file: docker/backend/Dockerfile
           push: true
-          tags: ghcr.io/sample:${{ github.ref_name }}
+          tags: ${{ steps.meta.outputs.tags }}
