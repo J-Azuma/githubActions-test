@@ -25,7 +25,7 @@ jobs:
         run: ./gradlew jar
       # イメージをビルドしてpushする
       - name: Build and Push
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v5
         with:
           context: .
           file: docker/backend/Dockerfile
